@@ -1,0 +1,22 @@
+<h1>Account Invoices</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th><abbr title="Month">Month</abbr></th>
+      <th><abbr title="Start Date">Start Date</abbr></th>
+      <th><abbr title="End Date">End Date</abbr></th>
+      <th><abbr title="Total"></abbr>Total</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @invoices.each do |invoice| %>
+    <tr>
+      <td><%#= invoice.month %> Month</td>
+      <td><%= invoice.period_start %></td>
+      <td><%= invoice.period_end %></td>
+      <td><%= invoice.total %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

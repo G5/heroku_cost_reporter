@@ -1,0 +1,5 @@
+{
+  "name": "heroku-cost-reporter",
+  "private": true,
+  "dependencies": {}
+}
