@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HerokuCostReporter</title>
+    <title>Heroku Cost Reporter</title>
     <%= csrf_meta_tags %>
+    <meta charset="utf-8">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <h2 class="subtitle is-3">
+              <%= svg('g5-logo') %> Heroku Cost Reporter
+              </h2>
+          </a>
+
+          <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+    <section class="section">
+      <div class="container is-fluid">
+      <%= yield %>
+      </div>
+    </section>
   </body>
 </html>
