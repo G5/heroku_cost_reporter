@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 describe Request do
-  let(:config) { Class.new Request }
   let(:successful_response) {
     [[{"charges_total"=>0,
      "created_at"=>"2017-05-01T03:22:31Z",
