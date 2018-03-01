@@ -1,6 +1,6 @@
 class InvoicesController < ApplicationController
   def index
-    @invoices = Heroku::Invoice.latest_invoices(clear_cache)
+    @invoices = Heroku::Invoice.invoices_within_last_year(clear_cache)
   end
 
   private

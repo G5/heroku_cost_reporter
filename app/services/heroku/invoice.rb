@@ -15,22 +15,18 @@ module Heroku
       response.map { |invoice| Invoice.new(invoice) }
     end
 
-    def self.latest_invoices(clear_cache)
-      invoices = self.all_invoices(clear_cache).sort_by(&:period_start).reverse!
-      first_invoice = invoices.first
-      invoices = invoices.select { |invoice| invoice if invoice.period_start > Date.parse(first_invoice.period_start).prev_year.to_s }
+    def self.most_current_invoices(clear_cache)
+      self.all_invoices(clear_cache).sort_by(&:period_start).reverse!
+    end
+
+    def self.invoices_within_last_year(clear_cache)
+      invoices = self.most_current_invoices(clear_cache)
+      latest_invoice = invoices.first
+      invoices = invoices.select { |invoice| invoice if invoice.period_start > Date.parse(latest_invoice.period_start).prev_year.to_s }
     end
 
     def initialize(args = {})
       super(args)
-    end
-
-    def last_year_to_date(date)
-      year + month + (day - 1)
-    end
-
-    def month
-      period_start.to_date.strftime("%B") if period_start
     end
   end
 end

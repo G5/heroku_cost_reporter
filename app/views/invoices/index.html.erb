@@ -12,7 +12,7 @@
   <tbody>
   <% @invoices.each do |invoice| %>
     <tr>
-      <td><%= invoice.month %></td>
+      <td><%= month(invoice) %></td>
       <td><%= invoice.period_start %></td>
       <td><%= invoice.period_end %></td>
       <td>$ <%= invoice.total %></td>
