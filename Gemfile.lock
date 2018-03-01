@@ -63,6 +63,7 @@ GEM
     erubis (2.7.0)
     excon (0.60.0)
     execjs (2.7.0)
+    fabrication (2.16.2)
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.21)
@@ -204,6 +205,7 @@ DEPENDENCIES
   bulma-rails (~> 0.6.2)
   byebug
   dotenv-rails
+  fabrication
   faraday
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)

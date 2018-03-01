@@ -38,6 +38,8 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails', '~> 3.7'
   gem 'dotenv-rails'
+  gem 'fabrication'
+  # gem 'webmock', '~> 2.1'
 end
 
 group :development do
