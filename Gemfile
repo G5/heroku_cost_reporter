@@ -14,6 +14,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'platform-api'
 gem 'faraday'
 gem "bulma-rails", "~> 0.6.2"
+gem 'jquery-rails'
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
