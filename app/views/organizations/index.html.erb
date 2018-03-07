@@ -1,0 +1,9 @@
+<h1 class="title">Organizations</h1>
+
+<%= content_tag :div, class: "organizations", data: {organizations: @organizations, token: ENV['HEROKU_AUTH_TOKEN']} do %>
+<% end %>
+
+<% @organizations.each do |organization| %>
+  <section class= '<%= organization.name %> is-info' >
+  </section>
+<% end %>
