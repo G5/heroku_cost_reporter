@@ -1,9 +1,16 @@
 <h1 class="title">Organizations</h1>
 
-<%= content_tag :div, class: "organizations", data: {organizations: @organizations, token: ENV['HEROKU_AUTH_TOKEN']} do %>
-<% end %>
+<div class='columns'>
+  <div class='column is-half'>
+  <%= content_tag :div, class: "organizations", data: {organizations: @organizations, token: ENV['HEROKU_AUTH_TOKEN']} do %>
+  <% end %>
 
-<% @organizations.each do |organization| %>
-  <section class= '<%= organization.name %> is-info' >
-  </section>
-<% end %>
+  <% @organizations.each do |organization| %>
+    <section class= 'group <%= organization.name %> is-info columns' >
+    </section>
+  <% end %>
+  </div>
+
+  <div class='column is-half'>
+  </div>
+</div>
