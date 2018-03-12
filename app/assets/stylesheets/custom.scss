@@ -12,3 +12,16 @@ p { font-family: 'Open Sans', sans-serif; }
   }
   svg { width: 30px; }
 }
+
+.table { margin-top: 0; }
+
+table.organizations { width: 100%; }
+
+.organizations {
+  tbody tr:not(.latest) {
+      display: none;
+  }
+}
+.expand { margin-top: auto; }
+
+
